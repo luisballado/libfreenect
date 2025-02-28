@@ -47,7 +47,7 @@ For the examples, you'll need
 
     #Copy and paste:
 
-    `# ATTR{product}=="Xbox NUI Motor"
+    # ATTR{product}=="Xbox NUI Motor"
     SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02b0", MODE="0666"
     # ATTR{product}=="Xbox NUI Audio"
     SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02ad", MODE="0666"
@@ -58,7 +58,7 @@ For the examples, you'll need
     # ATTR{product}=="Xbox NUI Motor"
     SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02be", MODE="0666"
     # ATTR{product}=="Xbox NUI Motor"
-    SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02bf", MODE="0666"`
+    SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02bf", MODE="0666"
 
     # if you don't have `make` or don't want color output
     # cmake --build .
