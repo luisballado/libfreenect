@@ -39,13 +39,14 @@ For the examples, you'll need
     sudo ldconfig /usr/local/lib64/
     sudo freenect-glview
 
-    #to use kinect as non-root user do the following:
+To use kinect as non-root user do the following:
+   
     sudo adduser $USER video
 
     #Also make a file with rules for the Linux device manager:
     sudo nano /etc/udev/rules.d/51-kinect.rules
 
-    #Copy and paste:
+Copy and paste:
 
     # ATTR{product}=="Xbox NUI Motor"
     SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02b0", MODE="0666"
