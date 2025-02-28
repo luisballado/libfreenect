@@ -35,6 +35,30 @@ For the examples, you'll need
     cd build
     cmake -L .. # -L lists all the project options
     make
+    sudo make install
+    sudo ldconfig /usr/local/lib64/
+    sudo freenect-glview
+
+    #to use kinect as non-root user do the following:
+    sudo adduser $USER video
+
+    #Also make a file with rules for the Linux device manager:
+    sudo nano /etc/udev/rules.d/51-kinect.rules
+
+    #Copy and paste:
+
+    `# ATTR{product}=="Xbox NUI Motor"
+    SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02b0", MODE="0666"
+    # ATTR{product}=="Xbox NUI Audio"
+    SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02ad", MODE="0666"
+    # ATTR{product}=="Xbox NUI Camera"
+    SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02ae", MODE="0666"
+    # ATTR{product}=="Xbox NUI Motor"
+    SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02c2", MODE="0666"
+    # ATTR{product}=="Xbox NUI Motor"
+    SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02be", MODE="0666"
+    # ATTR{product}=="Xbox NUI Motor"
+    SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02bf", MODE="0666"`
 
     # if you don't have `make` or don't want color output
     # cmake --build .
