@@ -60,7 +60,7 @@ For the examples, you'll need
     # ATTR{product}=="Xbox NUI Motor"
     SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02bf", MODE="0666"
 
-If you don't have `make` or don't want color output
+If you don't have `make` or don't want color output:
     cmake --build .
 
 Use CMake options to control what gets built.
